@@ -1,11 +1,10 @@
 # QuGlassyIsing
 Repository for `Glassy dynamics using Quantum Computers` Team in Qiskit Hackathon Europe
 
-## Glassy Dynamics using Quantum Computing
-
 
 <img width="1146" alt="image" src="https://user-images.githubusercontent.com/38852529/118729352-5ef76500-b853-11eb-9c6b-8471ecc55dc0.png">
 
+## Glassy Dynamics using Quantum Computing
 
 Answering some of the toughest questions in the field like:
 - Can we simulate the dramatic arrest of particles that leads to a system to act like a glass? 
@@ -18,31 +17,38 @@ Answering some of the toughest questions in the field like:
 
 
 
-<details><summary>1.) Aim</summary>
-  
-    Understanding the **nature of glass** is one of the longstanding fundamental problems of Natural Sciences. Simulating quantum properties on a quantum device inherently comes with a faster and more accurate description of the system. Hence we propose to study the dynamics of glass using quantum computers. 
+<details><summary><b>1.) Aim</b></summary>
+
+<hr>
+Understanding the <b>nature of glass</b> is one of the longstanding fundamental problems of Natural Sciences. Simulating quantum properties on a quantum device inherently comes with a faster and more accurate description of the system. Hence we propose to study the dynamics of glass using quantum computers. 
     
-  This problem statement falls in the category of “Application of Quantum Computing” in “Computational Natural Sciences”
+This problem statement falls in the category of “Application of Quantum Computing” in “Computational Natural Sciences”
+<hr>
   
 </details>
 
 
-<details><summary>2.) Glassy Dynamics</summary>
-  
-    Any kind of arrested liquid system falls under glassy systems. But simulating a glassy system is a still an unsolved problem. Although many theories have been put forward over the years, a one-size-fits-all theory still remains an open problem in the field of natural sciences.
+<details><summary><b>2.) Glassy Dynamics</b></summary>
+
+<hr>
+Any kind of arrested liquid system falls under glassy systems. But simulating a glassy system is a still an unsolved problem. Although many theories have been put forward over the years, a one-size-fits-all theory still remains an open problem in the field of natural sciences.
+<hr>
   
 </details>
 
 
-<details><summary>3.) Problem Statement</summary>
+<details><summary><b>3.) Problem Statement</b></summary>
+  
+<hr>
+In our project, we will be trying to address the  following :
 
-    In our project, we will be trying to address the  following :
-    -  Studying the representation and correlation of various components of “glassy dynamics” like:
-       -  Initialization of the glassy phase
-       -  Evolution of the glassy system
-       -  Long-term dynamics and aging
-       -  Clustering of disordered particles
-
+-  Studying the representation and correlation of various components of “glassy dynamics” like:
+   -  Initialization of the glassy phase
+   -  Evolution of the glassy system
+   -  Long-term dynamics and aging
+   -  Clustering of disordered particles
+<hr>
+  
 </details>
 
 
