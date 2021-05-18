@@ -2,35 +2,39 @@
 Repository for `Glassy dynamics using Quantum Computers` Team in Qiskit Hackathon Europe
 
 ## Glassy Dynamics using Quantum Computing
-Towards the deepest and most interesting unsolved problem in solid state physics*
+
+
+<img width="1146" alt="image" src="https://user-images.githubusercontent.com/38852529/118729352-5ef76500-b853-11eb-9c6b-8471ecc55dc0.png">
+
+
+Answering some of the toughest questions in the field like:
+- Can we simulate the dramatic arrest of particles that leads to a system to act like a glass? 
+- Can we understand the nature of the interaction of the particles in glassy systems?
+- How do glassy systems “age” with time?
+- Can we model our glassy systems beyond the realm of physics in order to be applicable for the simulation of complex systems?
 
 
 
-<details><summary>CLICK ME</summary>
-  <p>
+
+
+
+<details><summary>1.) Aim</summary>
+  
+    Understanding the **nature of glass** is one of the longstanding fundamental problems of Natural Sciences. Simulating quantum properties on a quantum device inherently comes with a faster and more accurate description of the system. Hence we propose to study the dynamics of glass using quantum computers. 
     
-  </p>
+  This problem statement falls in the category of “Application of Quantum Computing” in “Computational Natural Sciences”
+  
 </details>
 
 
-<details><summary>Aim</summary>
-  
-    Understanding the **nature of glass** is one of the longstanding fundamental problems of Natural Sciences. 
-Simulating quantum properties on a quantum device inherently comes with a faster and more accurate description of the system. Hence we propose to study the dynamics of glass using quantum computers. 
-    
-This problem statement falls in the category of “Application of Quantum Computing” in “Computational Natural Sciences”
-  
-</details>
-
-
-<details><summary>Glassy Dynamics</summary>
+<details><summary>2.) Glassy Dynamics</summary>
   
     Any kind of arrested liquid system falls under glassy systems. But simulating a glassy system is a still an unsolved problem. Although many theories have been put forward over the years, a one-size-fits-all theory still remains an open problem in the field of natural sciences.
   
 </details>
 
 
-<details><summary>Problem Statement</summary>
+<details><summary>3.) Problem Statement</summary>
 
     In our project, we will be trying to address the  following :
     -  Studying the representation and correlation of various components of “glassy dynamics” like:
@@ -42,17 +46,7 @@ This problem statement falls in the category of “Application of Quantum Comput
 </details>
 
 
-<img width="700" alt="image" src="https://user-images.githubusercontent.com/38852529/118728521-f065d780-b851-11eb-9153-0c91be7c4604.png">
-
-
-
-Answering some of the toughest questions in the field like:
-- Can we simulate the dramatic arrest of particles that leads to a system to act like a glass? 
-- Can we understand the nature of the interaction of the particles in glassy systems?
-- How do glassy systems “age” with time?
-- Can we model our glassy systems beyond the realm of physics in order to be applicable for the simulation of complex systems?
-
-We will be starting out with **2D Kinetic Ising model*( and studying the phase diagram for glass transition. After that, we would be looking at more comprehensive models for a more realistic simulation. There are a lot of theories like “Kob-Anderson Binary Mixture with Lennard-Jones Potential”, “Random First Order Transition Theory” and “Cellular Potts model” but we will be trying to apply “Ising Models for Spin-Glasses” for our simulation. 
+We will be starting out with **2D Kinetic Ising model** and studying the phase diagram for glass transition. After that, we would be looking at more comprehensive models for a more realistic simulation. There are a lot of theories like “Kob-Anderson Binary Mixture with Lennard-Jones Potential”, “Random First Order Transition Theory” and “Cellular Potts model” but we will be trying to apply **“Ising Models for Spin-Glasses”** for our simulation. 
 
 ### The aim of this project is to find a suitable theory of glassy dynamics that can be realistically simulated on a quantum computer.
 
