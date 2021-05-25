@@ -83,7 +83,21 @@ class Point:
         return self.parent[self.x][self.y+1]
 
     def __str__(self, ):
+        """Returns the point as string representation
+
+        Returns:
+            String
+        """
         return f"Point({self.x}, {self.y})"
+    
+    @property
+    def type(self, ):
+        """Returns the type of the cess
+
+        Returns:
+            Any: Type/Value of the cell
+        """
+        return self.parent[self.x][self.y]
 
 
 def get_1D_neghibour(mat, point):
