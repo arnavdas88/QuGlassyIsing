@@ -78,7 +78,7 @@ class Point:
             Any: Point on the right
         """
 
-        if self.x == len(self.parent[0]):
+        if self.y == len(self.parent[0]) - 1:
             return INT_MIN
         return self.parent[self.x][self.y+1]
 
@@ -99,27 +99,24 @@ class Point:
         """
         return self.parent[self.x][self.y]
 
-
-def get_1D_neghibour(mat, point):
-    """Gets the 1D neghibour in respect to the specified point on the matrix  
+def get_1D_neighbour(mat, point):
+    """Gets the 1D neighbour in respect to the specified point on the matrix  
 
     Args:
         mat (2D Array): The base matrix
         point (int, int): x, y point
 
     Returns:
-        Tuple: Returns 4 neghibouring points 
+        Tuple: Returns 4 neighbouring points 
     """
     point = Point(*point, mat)
     return ( point.left, point.right, point.top, point.bottom)
 
-
-
-def get_neghibour_mapping(mat):
+def get_neighbour_mapping(mat):
     """Gets all the points from the 2D Matrix as point lists
 
     Usage:
-        [x for x in get_neghibour_mapping(mat)]
+        [x for x in get_neighbour_mapping(mat)]
 
     Args:
         mat (2D List): 2D Matrix
@@ -130,3 +127,31 @@ def get_neghibour_mapping(mat):
     for x in range(len(mat)):
         for y in range(len(mat[0])):
             yield Point(x, y, mat)
+
+def get_interaction(mat):
+    """returns the total reversed kronecker interaction value
+
+    Usage:
+        >>> get_interaction(mat)
+        >>> 36.0
+
+    Args:
+        mat (2D Array): Base matrix
+
+    Returns:
+        float: total reversed kronecker interacton
+    """
+
+    R = len(mat)
+    C = len(mat[0])
+    total_interaction = 0
+    neighbour_mapping = get_neighbour_mapping(mat)
+    for neighbour in neighbour_mapping:
+        unique_neighbour = set([neighbour.left, neighbour.right, neighbour.top, neighbour.bottom, neighbour.type])
+        difference = len(unique_neighbour) - 1
+        # reversed_kronecker without using the function
+        total_interaction += difference
+        # if difference:
+        #     print(f"Difference of {difference} for ({neighbour.x}, {neighbour.y})")
+    total_interaction = total_interaction - (R+C) # Subtracting the box sides
+    return (total_interaction / 2 )
