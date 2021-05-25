@@ -69,7 +69,7 @@ class Point:
         """
         return self.parent[self.x][self.y+1]
 
-def get_1_neghibour(mat, point):
+def get_1D_neghibour(mat, point):
     """Gets the 1D neghibour in respect to the specified point on the matrix  
 
     Args:

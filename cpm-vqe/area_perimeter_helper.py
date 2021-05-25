@@ -5,11 +5,19 @@ import itertools
 
 
 def perimeter(matrix):
+    """Returns a dictionary mapping of each unique elements with the perimeter of their respective clusters.
+
+    Args:
+        matrix (2D Array): Base matrix
+
+    Returns:
+        dict: mapping of the perimeter
+    """
     R = len(matrix)
     C = len(matrix[0])
     
     def numofneighbour(mat, i, j, p=1):
-        count = 0;
+        count = 0
         if (i > 0 and mat[i - 1][j] == p):
             count+= 1
         if (j > 0 and mat[i][j - 1] == p):
@@ -17,17 +25,17 @@ def perimeter(matrix):
         if (i < R-1 and mat[i + 1][j] == p):
             count+= 1
         if (j < C-1 and mat[i][j + 1] == p):
-            count+= 1;
-        return count;
+            count+= 1
+        return count
     
     def findperimeter(mat, p=1):
         perimeter = 0
         for i in range(0, R):
             for j in range(0, C):
                 if (mat[i][j]) == p:
-                    perimeter += (4 - numofneighbour(mat, i, j, p));
+                    perimeter += (4 - numofneighbour(mat, i, j, p))
     
-        return perimeter;
+        return perimeter
     return {x:findperimeter(matrix, x) for x in range(1, 10)}
 
 
