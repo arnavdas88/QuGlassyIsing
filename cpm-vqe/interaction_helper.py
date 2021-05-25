@@ -1,6 +1,8 @@
 # This is the file containing the interaction method for the interacting cells
+import sys
 from config import *
 
+INT_MIN = -sys.maxsize - 1
 
 def reversed_kronecker(cell_1: int, cell_2: int):
     """
@@ -40,6 +42,8 @@ class Point:
         Returns:
             Any: Point on the top
         """
+        if self.x == 0:
+            return INT_MIN
         return self.parent[self.x-1][self.y]
 
     @property
@@ -49,6 +53,9 @@ class Point:
         Returns:
             Any: Point on the bottom
         """
+
+        if self.x == len(self.parent) - 1:
+            return INT_MIN
         return self.parent[self.x+1][self.y]
 
     @property
@@ -58,6 +65,9 @@ class Point:
         Returns:
             Any: Point on the left
         """
+
+        if self.y == 0:
+            return INT_MIN
         return self.parent[self.x][self.y-1]
 
     @property
@@ -67,7 +77,14 @@ class Point:
         Returns:
             Any: Point on the right
         """
+
+        if self.x == len(self.parent[0]):
+            return INT_MIN
         return self.parent[self.x][self.y+1]
+
+    def __str__(self, ):
+        return f"Point({self.x}, {self.y})"
+
 
 def get_1D_neghibour(mat, point):
     """Gets the 1D neghibour in respect to the specified point on the matrix  
@@ -81,3 +98,21 @@ def get_1D_neghibour(mat, point):
     """
     point = Point(*point, mat)
     return ( point.left, point.right, point.top, point.bottom)
+
+
+
+def get_neghibour_mapping(mat):
+    """Gets all the points from the 2D Matrix as point lists
+
+    Usage:
+        [x for x in get_neghibour_mapping(mat)]
+
+    Args:
+        mat (2D List): 2D Matrix
+
+    Yields:
+        Point: Point representing the points in the matrix
+    """
+    for x in range(len(mat)):
+        for y in range(len(mat[0])):
+            yield Point(x, y, mat)
