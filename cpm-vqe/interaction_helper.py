@@ -129,29 +129,14 @@ def get_neighbour_mapping(mat):
             yield Point(x, y, mat)
 
 def get_interaction(mat):
-    """returns the total reversed kronecker interaction value
-
-    Usage:
-        >>> get_interaction(mat)
-        >>> 36.0
-
-    Args:
-        mat (2D Array): Base matrix
-
-    Returns:
-        float: total reversed kronecker interacton
-    """
-
     R = len(mat)
     C = len(mat[0])
+    arr = [0, R, C]
     total_interaction = 0
     neighbour_mapping = get_neighbour_mapping(mat)
     for neighbour in neighbour_mapping:
         unique_neighbour = set([neighbour.left, neighbour.right, neighbour.top, neighbour.bottom, neighbour.type])
-        difference = len(unique_neighbour) - 1
-        # reversed_kronecker without using the function
-        total_interaction += difference
-        # if difference:
-        #     print(f"Difference of {difference} for ({neighbour.x}, {neighbour.y})")
+        for f_neighbour in unique_neighbour:
+            total_interaction += reversed_kronecker(f_neighbour, neighbour.type)
     total_interaction = total_interaction - (R+C) # Subtracting the box sides
     return (total_interaction / 2 )
