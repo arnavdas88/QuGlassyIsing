@@ -142,18 +142,7 @@ def get_interaction(mat):
     neighbour_mapping = get_neighbour_mapping(mat)
     for neighbour in neighbour_mapping:
         unique_neighbour = set([neighbour.left, neighbour.right, neighbour.top, neighbour.bottom, neighbour.type])
-<<<<<<< HEAD
         for f_neighbour in unique_neighbour:
             total_interaction += reversed_kronecker(f_neighbour, neighbour.type)
     total_interaction = total_interaction - (R+C) # Subtracting the box sides
     return (total_interaction / 2 )
-=======
-        difference = len(unique_neighbour) - 1
-        # reversed_kronecker without using the function
-        total_interaction += difference
-        # if difference:
-        #     print(f"Difference of {difference} for ({neighbour.x}, {neighbour.y})")
-    total_interaction = total_interaction - (R + C)  # Subtracting the box sides
-    total_energy = j * total_interaction / 2
-    return total_energy
->>>>>>> b4889c4eb2a261854c9d5e487431421854f356e9
