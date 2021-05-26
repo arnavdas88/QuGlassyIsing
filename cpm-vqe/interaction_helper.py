@@ -20,6 +20,7 @@ def reversed_kronecker(cell_1: int, cell_2: int):
     if cell_1 != cell_2:
         interaction_strength = j
         return interaction_strength
+    return 0
 
 
 class Point:

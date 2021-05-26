@@ -41,16 +41,16 @@ def perimeter(matrix):
 
 cellular_potts_list = cellular_potts_list
 cellular_potts_list_flattened = list(itertools.chain(*cellular_potts_list))
-area_of_cell_dict = Counter(cellular_potts_list_flattened)
+area_of_cell_dict = dict(Counter(cellular_potts_list_flattened))
 perimeter_of_cell_dict = perimeter(cellular_potts_list)
 
-print("\n"*2)
-pprint(cellular_potts_list)
-print("\n"*2)
-
-
-print("Area: ", area_of_cell_dict)
-print("Perimeter: ", perimeter_of_cell_dict)
+# print("\n"*2)
+# pprint(cellular_potts_list)
+# print("\n"*2)
+#
+#
+# print("Area: ", area_of_cell_dict)
+# print("Perimeter: ", perimeter_of_cell_dict)
 
 
 print("\n"*4)
