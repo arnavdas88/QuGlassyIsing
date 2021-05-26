@@ -36,7 +36,7 @@ def perimeter(matrix):
                     perimeter += (4 - numofneighbour(mat, i, j, p))
     
         return perimeter
-    return {x:findperimeter(matrix, x) for x in range(1, 10)}
+    return {x:findperimeter(matrix, x) for x in range(1, no_of_cells + 1)}
 
 
 cellular_potts_list = cellular_potts_list
