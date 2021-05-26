@@ -4,6 +4,7 @@ from config import *
 
 INT_MIN = -sys.maxsize - 1
 
+
 def reversed_kronecker(cell_1: int, cell_2: int):
     """
     This function determines the interaction between cell_1 and cell_2. Here were are going to implement a reversed
@@ -20,10 +21,12 @@ def reversed_kronecker(cell_1: int, cell_2: int):
         interaction_strength = j
         return interaction_strength
 
+
 class Point:
     """Defines a point
     """
-    def __init__(self, x, y, parent = [[]]):
+
+    def __init__(self, x, y, parent=[[]]):
         """Creates a point instance on a parent
 
         Args:
@@ -34,7 +37,7 @@ class Point:
         self.x = x
         self.y = y
         self.parent = parent
-    
+
     @property
     def top(self, ):
         """Top point to the original
@@ -44,7 +47,7 @@ class Point:
         """
         if self.x == 0:
             return INT_MIN
-        return self.parent[self.x-1][self.y]
+        return self.parent[self.x - 1][self.y]
 
     @property
     def bottom(self, ):
@@ -56,7 +59,7 @@ class Point:
 
         if self.x == len(self.parent) - 1:
             return INT_MIN
-        return self.parent[self.x+1][self.y]
+        return self.parent[self.x + 1][self.y]
 
     @property
     def left(self, ):
@@ -68,7 +71,7 @@ class Point:
 
         if self.y == 0:
             return INT_MIN
-        return self.parent[self.x][self.y-1]
+        return self.parent[self.x][self.y - 1]
 
     @property
     def right(self, ):
@@ -80,7 +83,7 @@ class Point:
 
         if self.y == len(self.parent[0]) - 1:
             return INT_MIN
-        return self.parent[self.x][self.y+1]
+        return self.parent[self.x][self.y + 1]
 
     def __str__(self, ):
         """Returns the point as string representation
@@ -89,7 +92,7 @@ class Point:
             String
         """
         return f"Point({self.x}, {self.y})"
-    
+
     @property
     def type(self, ):
         """Returns the type of the cess
@@ -98,6 +101,7 @@ class Point:
             Any: Type/Value of the cell
         """
         return self.parent[self.x][self.y]
+
 
 def get_1D_neighbour(mat, point):
     """Gets the 1D neighbour in respect to the specified point on the matrix  
@@ -110,7 +114,8 @@ def get_1D_neighbour(mat, point):
         Tuple: Returns 4 neighbouring points 
     """
     point = Point(*point, mat)
-    return ( point.left, point.right, point.top, point.bottom)
+    return (point.left, point.right, point.top, point.bottom)
+
 
 def get_neighbour_mapping(mat):
     """Gets all the points from the 2D Matrix as point lists
@@ -127,6 +132,7 @@ def get_neighbour_mapping(mat):
     for x in range(len(mat)):
         for y in range(len(mat[0])):
             yield Point(x, y, mat)
+
 
 def get_interaction(mat):
     """returns the total reversed kronecker interaction value
@@ -153,5 +159,6 @@ def get_interaction(mat):
         total_interaction += difference
         # if difference:
         #     print(f"Difference of {difference} for ({neighbour.x}, {neighbour.y})")
-    total_interaction = total_interaction - (R+C) # Subtracting the box sides
-    return (total_interaction / 2 )
+    total_interaction = total_interaction - (R + C)  # Subtracting the box sides
+    total_energy = j * total_interaction / 2
+    return total_energy
