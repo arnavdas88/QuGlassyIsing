@@ -30,6 +30,7 @@ setuptools.setup(
     author_email='arnav.das88@gmail.com; turbasu.chatterjee@gmail.com; sishmam51@gmail.com;',
     license='Apache-2.0',
     classifiers=(
+        "Development Status :: 3 - Alpha",
         "Environment :: Console",
         "License :: OSI Approved :: Apache Software License",
         "Intended Audience :: Developers",
