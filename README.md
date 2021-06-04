@@ -130,8 +130,7 @@ Our provided qiskit helper package provides the helper functions for the all the
 │   ├── 1Dising.py
 │   ├── 2Dising.py
 │   └── test.py
-├── setup.py
-└── tree.sh
+└── setup.py
 ```
 
 ##### Install :
