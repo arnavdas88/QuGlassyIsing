@@ -76,12 +76,13 @@ Region of disordered phase between paramagnetic phase and anti-ferromagnetic pha
 
 #### Cellular Potts Model
 
-Python function to generate the quadratic equation with the correct interactions from the 2D lattice map of cells
+The Cellular Potts Model (CPM) for tightly packed cells in biological tissue can exhibit glass-like behaviour as the cells change their configurations, thereby changing the total energy possessed by the system. 
 
-`Docplex` converting the quadratic equation to an ising hamiltonian
+In our model, instead of using Markov Chain Monte Carlo (which is generally used in CPM models), we have used a Variational Quantum Eigensolver to reduce the energy to its ground state. 
 
-Varying the interfacial tension term, difference in energy gradient during minimization is seen. Higher tensions prevents the system from reaching the ground state peacefully. (need more stuff)
+This won’t tell us the configurations of the cells but it will tell us the exact energy for which the tissue reaches its ground state energy configuration.
 
+`Docplex` : converting the quadratic equation to an ising hamiltonian
 
 ##### Current Work
 - Implementation of Transverse Field Ising Model in a Longitudinal Field and Cellular-Potts Model to simulate glassy dynamics 
