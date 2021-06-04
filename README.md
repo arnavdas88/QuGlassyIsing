@@ -4,7 +4,10 @@ Repository for `Glassy dynamics using Quantum Computers` Team in Qiskit Hackatho
 <img width="1146" alt="image" src="https://user-images.githubusercontent.com/38852529/118729352-5ef76500-b853-11eb-9c6b-8471ecc55dc0.png">
 
 ## Glassy Dynamics using Quantum Computing
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+![GitHub release](https://img.shields.io/github/v/release/arnavdas88/QuGlassyIsing?include_prereleases)
+![GitHub repo size](https://img.shields.io/github/repo-size/arnavdas88/QuGlassyIsing)
+[![License](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 Answering some of the toughest questions in the field like:
