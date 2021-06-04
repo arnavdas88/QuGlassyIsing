@@ -63,7 +63,6 @@ Any kind of arrested liquid system falls under glassy systems. But simulating a 
 </details>
 
 
-We will be starting out with **2D Kinetic Ising model** and studying the phase diagram for glass transition. After that, we would be looking at more comprehensive models for a more realistic simulation. There are a lot of theories like “Kob-Anderson Binary Mixture with Lennard-Jones Potential”, “Random First Order Transition Theory” and “Cellular Potts model” but we will be trying to apply **“Ising Models for Spin-Glasses”** for our simulation. 
 
 ### The Transverse Ising Model In a Longitudinal Field
 
