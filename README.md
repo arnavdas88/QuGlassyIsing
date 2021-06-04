@@ -87,10 +87,10 @@ Creating a hamiltonian for the 1D Ising is easier with `qiskit_glassydynamics`.
 # For 1D
 
 J_hamiltonian = ising.Ising1DHamiltonian(5)
-BJ_hamiltonian = ising.FieldHamiltonian( 5 , 'Z')
+Bz_hamiltonian = ising.FieldHamiltonian( 5 , 'Z')
 Bx_hamiltonian = ising.FieldHamiltonian( 5 , 'X')
 
-H = - .75 * J_hamiltonian + .116 * BJ_hamiltonian - .431 * Bx_hamiltonian
+H = - .75 * J_hamiltonian + .116 * Bz_hamiltonian - .431 * Bx_hamiltonian
 ```
 
 For 2D Ising, we can use `Ising2DHamiltonian`
@@ -99,10 +99,10 @@ For 2D Ising, we can use `Ising2DHamiltonian`
 # For 2D
 
 J_hamiltonian = ising.Ising2DHamiltonian( (5, 5) )
-BJ_hamiltonian = ising.FieldHamiltonian( (5, 5) , 'Z')
+Bz_hamiltonian = ising.FieldHamiltonian( (5, 5) , 'Z')
 Bx_hamiltonian = ising.FieldHamiltonian( (5, 5) , 'X')
 
-H = - .75 * J_hamiltonian + .116 * BJ_hamiltonian - .431 * Bx_hamiltonian
+H = - .75 * J_hamiltonian + .116 * Bz_hamiltonian - .431 * Bx_hamiltonian
 ```
 
 

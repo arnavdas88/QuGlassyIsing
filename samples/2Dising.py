@@ -19,7 +19,7 @@ def store_intermediate_result(eval_count, parameters, mean, std):
 
 
 J_hamiltonian = ising.Ising2DHamiltonian( (5, 5) )
-BJ_hamiltonian = ising.FieldHamiltonian( (5, 5) , 'Z')
+Bz_hamiltonian = ising.FieldHamiltonian( (5, 5) , 'Z')
 Bx_hamiltonian = ising.FieldHamiltonian( (5, 5) , 'X')
 
 
@@ -27,12 +27,12 @@ print("=== Z ===")
 print(J_hamiltonian)
 print()
 print("=== Bz ===")
-print(BJ_hamiltonian)
+print(Bz_hamiltonian)
 print()
 print("=== Bx ===")
 print(Bx_hamiltonian)
 
-H = - 1. * J_hamiltonian + 1. * BJ_hamiltonian - 1. * Bx_hamiltonian
+H = - 1. * J_hamiltonian + 1. * Bz_hamiltonian - 1. * Bx_hamiltonian
 
 print()
 print("=== H ===")
