@@ -72,6 +72,38 @@ The problem of understanding glass remains an open problem to this day and we ar
 > - Probably Implementing a 3D-Kinetic Ising model to simulate the glassy dynamics 
 > - Probable use of quantum-classical hybrid Deep Learning model to KABLJ data to predict the long term dynamics of glasses
 
+## Provided Qiskit Helper Package
+
+Our provided qiskit helper package provides the helper functions for the all the heavy lifting tasks. It eases the task of creating the hamiltonian by a lot.
+
+```python
+from qiskit_glassydynamics.helpers import ising
+```
+
+Creating a hamiltonian for the 1D Ising is easier with `qiskit_glassydynamics`.
+
+```python
+# For 1D
+
+Z_hamiltonian = ising.Ising1DHamiltonian(5)
+Bz_hamiltonian = ising.FieldHamiltonian( 5 , 'Z')
+Bx_hamiltonian = ising.FieldHamiltonian( 5 , 'X')
+
+H = - .75 * Z_hamiltonian + .116 * Bz_hamiltonian - .431 * Bx_hamiltonian
+```
+
+For 2D Ising, we can use `Ising2DHamiltonian`
+
+```python
+# For 2D
+
+Z_hamiltonian = ising.Ising2DHamiltonian( (5, 5) )
+Bz_hamiltonian = ising.FieldHamiltonian( (5, 5) , 'Z')
+Bx_hamiltonian = ising.FieldHamiltonian( (5, 5) , 'X')
+
+H = - .75 * Z_hamiltonian + .116 * Bz_hamiltonian - .431 * Bx_hamiltonian
+```
+
 
 ## Reference
 
