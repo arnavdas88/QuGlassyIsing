@@ -101,11 +101,7 @@ This won’t tell us the configurations of the cells but it will tell us the exa
 - Ising formulation of the Kob Anderson Binary Mixture with Lennard Jones Potential for studying molecular glass
 
 
-## Provided Qiskit Helper Package
-
-Our provided qiskit helper package provides the helper functions for the all the heavy lifting tasks. It eases the task of creating the hamiltonian by a lot.
-
-### Project Structure
+## Project Structure
 ```bash
 ├── FUTURE_WORK.pdf
 ├── LICENSE
@@ -132,6 +128,11 @@ Our provided qiskit helper package provides the helper functions for the all the
 │   └── test.py
 └── setup.py
 ```
+
+
+## Provided Qiskit Helper Package
+
+Our provided qiskit helper package provides the helper functions for the all the heavy lifting tasks. It eases the task of creating the hamiltonian by a lot.
 
 ##### Install :
 
