@@ -67,11 +67,14 @@ Any kind of arrested liquid system falls under glassy systems. But simulating a 
 ### The Transverse Ising Model In a Longitudinal Field
 
 
-**1 dimensional:** The Longitudinal fields contribute more to the lowest energy than Transverse field. The transverse field account for the quantum fluctuations in the system. 
+**1 Dimensional:** The Longitudinal fields contribute more to the lowest energy than Transverse field. The transverse field account for the quantum fluctuations in the system. 
 
-**2 dimensional:** The best 3 spin configurations for each case are similar to each other. This means that the fields and interactions are pushing the system to reach a preferable configuration successfully. Our results are hence, coherent. 
+**2 Dimensional:** The best 3 spin configurations for each case are similar to each other. This means that the fields and interactions are pushing the system to reach a preferable configuration successfully. Our results are hence, coherent. 
 
-Region of disordered phase between paramagnetic phase and anti-ferromagnetic phase. Different disordered phase region from 1D as shown in the reference paper [PhysRevE.99.012122](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.99.012122), due to the varying number of interactions for spins in center and edges
+Region of disordered phase between paramagnetic phase and anti-ferromagnetic phase. Different disordered phase region from 1D as shown in the reference paper [PhysRevE.99.012122](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.99.012122), due to the varying number of interactions for spins in center and edges.
+
+If there is no longitudinal field, there is near perfect antiferromagnetic ordering. So no glass. But as we increase the longitudinal fields, we see disorder i.e combination of anti ferromagentic and ferromangentic. The ferromagenetism is seen in local moments. But if you increase the longitudinal field too much, it starts to show paramagnetism. Same goes for the transverse field. So, for a some particular combinations of both the fields, we can see disorder and we have found that the disordered phase lies in a region between paramagnetic and anti-ferromagnetic phase.
+
 
 
 #### Cellular Potts Model
@@ -84,7 +87,7 @@ This won’t tell us the configurations of the cells but it will tell us the exa
 
 `Docplex` : converting the quadratic equation to an ising hamiltonian
 
-##### Current Work
+##### Completed Work
 - Implementation of Transverse Field Ising Model in a Longitudinal Field and Cellular-Potts Model to simulate glassy dynamics 
 - Open source library to simulate glassy dynamics that can ‘plug and play’ with the existing Qiskit framework
 
