@@ -80,6 +80,14 @@ The problem of understanding glass remains an open problem to this day and we ar
 
 Our provided qiskit helper package provides the helper functions for the all the heavy lifting tasks. It eases the task of creating the hamiltonian by a lot.
 
+##### Install :
+
+```shell
+$ pip3 install https://github.com/arnavdas88/QuGlassyIsing/releases/download/v0.0.1-alpha/QuGlassyIsing-0.0.1a0-py3-none-any.whl
+```
+
+##### Usage :
+
 ```python
 from qiskit_glassydynamics.helpers import ising
 ```
