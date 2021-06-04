@@ -53,10 +53,10 @@ Any kind of arrested liquid system falls under glassy systems. But simulating a 
   
 <hr>
 
--  If glassy systems arise in two different toy models from two different fields 
-- Pushing the boundaries of NISQ era computing applications by simulating the dynamics of glass on hardware suitable for NISQ Devices
-- Kickstart a new area of research for the quantum computing in natural sciences community
-- Proposed Qiskit Module and Tutorial
+- 1st week: Read Deepmind's Glassy Dynamics Paper. Can it be replicated using NISQ era QC? The answer turned out to be a resounding 'NO'. Decided to implement 2D faciliated Kinetic Ising Model. Read the Hubbard Model implementation using VQE. Do we need creation/annihilation operator for our project as it was used there? No. Just Ising formulations of our model is necessary. Read about probable use of QML in our work. No appropriate use found that can be implementated in the hackathon's time frame. But looked like an interesting research problem to pursue afterwards. 
+- 2nd week: The penalty function formulations required to impose the local constraints in the 2D facilitated Kinetic Model requires more extensive study. This is not doable in the project timeline. Made a report and presentation on it and we discussed and decided to do it post hackathon. The report has been uploaded. We decided on implentating a Transverse Ising Model in a longitudinal field, which shows disordered phases according to the few papers that we read. This could show hint at glassiness: a temporal state between two magentic phases observed during Transition. 
+- 3rd week: Started Cellular Potts Model implementation. Made helper functions in python to generate the equations for CPM to define the correct interactions among the cells. Learnt that varying the interactions will show us the metastablities during minimization that is a characteristics of a glassy system. It would be awesome if the relaxation could be shown, but that seems to be impossible as we can not exactly track the center of mass of the cells when converted to the ising formulation. The Ising formulations of the equations were made as well. Looking good so far! Maybe, we finally found two models that we can finish within the deadline?!?
+-  4th week: TOTAL CHAOS! Doable within time, but so much work! Started building the proposed Qiskit Module as we have our formulations ready. Pushed our personal computers to the limit. The run of the results came in and looking good so far! There are good evidence of the disordered phases and flucations that we wanted to show in our model. Time to write the report and make the video! It has been a fun journey. First two weeks, we tried a lot of stuff that did not work as of now, but we got a lot of ideas that we would love to pursue in the future!
 
 <hr>
   
