@@ -82,6 +82,14 @@ def Ising2DHamiltonian(matrix_dimension = None) -> PauliSumOp:
 
 @str_to_hamiltonian
 def Ising1DHamiltonian(matrix_length = None) -> PauliSumOp:
+    """Gets total interaction over the ising matrix and returns the hamiltonian
+
+    Args:
+        matrix_dimension (int, optional): An integer representing the length of the ising matrix . Defaults to 7.
+
+    Returns:
+        PauliSumOp: PauliSumOp representation of the total hamiltonian.
+    """
     if not matrix_length:
         matrix_length = 7
     arr = [0 for i in range(matrix_length)]
@@ -96,6 +104,15 @@ def Ising1DHamiltonian(matrix_length = None) -> PauliSumOp:
 
 @str_to_hamiltonian
 def FieldHamiltonian(matrix_dimension = None, constructor = 'Z')->PauliSumOp:
+    """Generates a field hamiltonian for the overall ising.
+
+    Args:
+        matrix_dimension (int or tuple, optional): General dimension of the overall matrix hamiltonian. Defaults to (3, 3).
+        constructor (str, optional): The interaction operation for the field hamiltonian. Defaults to 'Z'.
+
+    Returns:
+        PauliSumOp: PauliSumOp representation of the field hamiltonian 
+    """
     if not matrix_dimension:
         matrix_dimension = (3 , 3)
     if type(matrix_dimension) == type(()):
