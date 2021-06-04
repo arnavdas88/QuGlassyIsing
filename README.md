@@ -2,7 +2,7 @@
 Repository for `Glassy dynamics using Quantum Computers` Team in Qiskit Hackathon Europe
 
 
-<img width="750" alt="image" src="https://user-images.githubusercontent.com/38852529/118729352-5ef76500-b853-11eb-9c6b-8471ecc55dc0.png">
+<img width="550" alt="image" src="https://user-images.githubusercontent.com/38852529/118729352-5ef76500-b853-11eb-9c6b-8471ecc55dc0.png">
 
 ## Glassy Dynamics using Quantum Computing
 
@@ -135,6 +135,11 @@ H = - .75 * J_hamiltonian + .116 * Bz_hamiltonian - .431 * Bx_hamiltonian
 <sup><a href="https://iopscience.iop.org/article/10.1209/0295-5075/116/28009/meta#:~:text=We%20map%20out%20the%20phase,that%20this%20phase%20is%20glassy.">[3]</a></sup> M. Chiang and D. Marenduzzo, [Glass transitions in the cellular Potts model](https://iopscience.iop.org/article/10.1209/0295-5075/116/28009/meta#:~:text=We%20map%20out%20the%20phase,that%20this%20phase%20is%20glassy.), 2016
 
 <sup><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.35.1792">[4]</a></sup> David Sherrington and Scott Kirkpatrick, [Solvable Model of a Spin-Glass](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.35.1792), 1975
+
+<sup><a href="https://www.frontiersin.org/article/10.3389/fphy.2014.00005">[5]</a></sup> Andrew Lucas, [Ising formulations of many NP problems](https://www.frontiersin.org/article/10.3389/fphy.2014.00005), 2014
+
+<sup><a href="https://doi.org/10.1038/nature09994">[6]</a></sup> Simon, J., Bakr, W., Ma, R. et al. [Quantum simulation of antiferromagnetic spin chains in an optical lattice](https://doi.org/10.1038/nature09994), 2011
+
 
 
 ## About Us
