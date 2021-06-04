@@ -18,9 +18,9 @@ def store_intermediate_result(eval_count, parameters, mean, std):
   values.append(mean)
 
 
-Z_hamiltonian = ising.Ising2D( (5, 5) )
-Bz_hamiltonian = ising.plain_hamiltonian( (5, 5) , 'Z')
-Bx_hamiltonian = ising.plain_hamiltonian( (5, 5) , 'X')
+Z_hamiltonian = ising.Ising2DHamiltonian( (5, 5) )
+Bz_hamiltonian = ising.FieldHamiltonian( (5, 5) , 'Z')
+Bx_hamiltonian = ising.FieldHamiltonian( (5, 5) , 'X')
 
 
 print("=== Z ===")

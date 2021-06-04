@@ -1,15 +1,15 @@
 from qiskit_glassydynamics.helpers import ising
 
-ising_1D_hamiltonian = ising.Ising1D(10)
-ising_2D_hamiltonian = ising.Ising2D((5, 5))
-plain_hamiltonian_Z = ising.plain_hamiltonian( (3,3) , 'Z')
-plain_hamiltonian_X = ising.plain_hamiltonian( (3,3) , 'X')
+ising_1D_hamiltonian = ising.Ising1DHamiltonian(10)
+ising_2D_hamiltonian = ising.Ising2DHamiltonian((5, 5))
+FieldHamiltonian_Z = ising.FieldHamiltonian( (3,3) , 'Z')
+FieldHamiltonian_X = ising.FieldHamiltonian( (3,3) , 'X')
 
 print()
 print(ising_1D_hamiltonian)
 print()
-print(type(plain_hamiltonian_Z))
+print(type(FieldHamiltonian_Z))
 print()
-print(plain_hamiltonian_X)
+print(FieldHamiltonian_X)
 print()
-print(plain_hamiltonian_Z)
+print(FieldHamiltonian_Z)

@@ -49,7 +49,7 @@ def array2hamiltonian(arr, op = 'Z'):
     return f"({'^'.join(result)})"
 
 @str_to_hamiltonian
-def Ising2D(matrix_dimension = None) -> PauliSumOp:
+def Ising2DHamiltonian(matrix_dimension = None) -> PauliSumOp:
     """Gets total interaction over the ising matrix and returns the hamiltonian
 
     Args:
@@ -81,7 +81,7 @@ def Ising2D(matrix_dimension = None) -> PauliSumOp:
     return output
 
 @str_to_hamiltonian
-def Ising1D(matrix_length = None) -> PauliSumOp:
+def Ising1DHamiltonian(matrix_length = None) -> PauliSumOp:
     if not matrix_length:
         matrix_length = 7
     arr = [0 for i in range(matrix_length)]
@@ -95,7 +95,7 @@ def Ising1D(matrix_length = None) -> PauliSumOp:
     return opmap
 
 @str_to_hamiltonian
-def plain_hamiltonian(matrix_dimension = None, constructor = 'Z')->PauliSumOp:
+def FieldHamiltonian(matrix_dimension = None, constructor = 'Z')->PauliSumOp:
     if not matrix_dimension:
         matrix_dimension = (3 , 3)
     if type(matrix_dimension) == type(()):
