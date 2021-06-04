@@ -84,7 +84,7 @@ Varying the interfacial tension term, difference in energy gradient during minim
 
 
 ##### Current Work
-- Implementation of 2D-Kinetic Ising model and Cellular-Potts Model to simulate glassy dynamics 
+- Implementation of Transverse Field Ising Model in a Longitudinal Field and Cellular-Potts Model to simulate glassy dynamics 
 - Open source library to simulate glassy dynamics that can ‘plug and play’ with the existing Qiskit framework
 
 ##### Future Work
