@@ -169,6 +169,8 @@ Bx_hamiltonian = ising.FieldHamiltonian( (5, 5) , 'X')
 H = - .75 * J_hamiltonian + .116 * Bz_hamiltonian - .431 * Bx_hamiltonian
 ```
 
+For complete sample, look at [2D Ising.py](https://github.com/arnavdas88/QuGlassyIsing/blob/main/samples/2Dising.py) and [1D Ising.py](https://github.com/arnavdas88/QuGlassyIsing/blob/main/samples/1Dising.py)
+
 
 ## Reference
 
