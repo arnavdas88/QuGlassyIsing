@@ -67,9 +67,9 @@ Any kind of arrested liquid system falls under glassy systems. But simulating a 
 ### The Transverse Ising Model In a Longitudinal Field
 
 
-**1 dimensional:** The Longitudinal fields contribute more to the lowest energy than Transverse field. The transverse field account for the quantum fluctuations in the system. 
+**1 Dimensional:** The Longitudinal fields contribute more to the lowest energy than Transverse field. The transverse field account for the quantum fluctuations in the system. 
 
-**2 dimensional:** The best 3 spin configurations for each case are similar to each other. This means that the fields and interactions are pushing the system to reach a preferable configuration successfully. Our results are hence, coherent. 
+**2 Dimensional:** The best 3 spin configurations for each case are similar to each other. This means that the fields and interactions are pushing the system to reach a preferable configuration successfully. Our results are hence, coherent. 
 
 Region of disordered phase between paramagnetic phase and anti-ferromagnetic phase. Different disordered phase region from 1D as shown in the reference paper [PhysRevE.99.012122](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.99.012122), due to the varying number of interactions for spins in center and edges.
 
