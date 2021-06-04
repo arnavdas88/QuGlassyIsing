@@ -122,7 +122,7 @@ Our provided qiskit helper package provides the helper functions for the all the
 ├── requirements.txt
 ├── research
 │   ├── cpm-vqe
-│   ├── glassy\ grid
+│   ├── glassy grid
 │   ├── notebooks
 │   ├── pickle-files
 │   └── rough-work-misc
