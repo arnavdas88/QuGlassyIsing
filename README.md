@@ -108,13 +108,13 @@ H = - .75 * J_hamiltonian + .116 * Bz_hamiltonian - .431 * Bx_hamiltonian
 
 ## Reference
 
-[1] Scott Butler and Peter Harrowell, [The origin of glassy dynamics in the 2D facilitated kinetic Ising model](https://doi.org/10.1063/1.461768), 1991
+<sup><a href="https://doi.org/10.1063/1.461768">[1]</a></sup> Scott Butler and Peter Harrowell, [The origin of glassy dynamics in the 2D facilitated kinetic Ising model](https://doi.org/10.1063/1.461768), 1991
 
-[2] Bapst et. al., [Unveiling the predictive power of static structure in glassy systems](https://www.nature.com/articles/s41567-020-0842-8), 2020
+<sup><a href="https://www.nature.com/articles/s41567-020-0842-8">[2]</a></sup> Bapst et. al., [Unveiling the predictive power of static structure in glassy systems](https://www.nature.com/articles/s41567-020-0842-8), 2020
 
-[3] M. Chiang and D. Marenduzzo, [Glass transitions in the cellular Potts model](https://iopscience.iop.org/article/10.1209/0295-5075/116/28009/meta#:~:text=We%20map%20out%20the%20phase,that%20this%20phase%20is%20glassy.), 2016
+<sup><a href="https://iopscience.iop.org/article/10.1209/0295-5075/116/28009/meta#:~:text=We%20map%20out%20the%20phase,that%20this%20phase%20is%20glassy.">[3]</a></sup> M. Chiang and D. Marenduzzo, [Glass transitions in the cellular Potts model](https://iopscience.iop.org/article/10.1209/0295-5075/116/28009/meta#:~:text=We%20map%20out%20the%20phase,that%20this%20phase%20is%20glassy.), 2016
 
-[4] David Sherrington and Scott Kirkpatrick, [Solvable Model of a Spin-Glass](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.35.1792), 1975
+<sup><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.35.1792">[4]</a></sup> David Sherrington and Scott Kirkpatrick, [Solvable Model of a Spin-Glass](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.35.1792), 1975
 
 
 ## About Us
