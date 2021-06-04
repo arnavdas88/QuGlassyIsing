@@ -105,6 +105,35 @@ This won’t tell us the configurations of the cells but it will tell us the exa
 
 Our provided qiskit helper package provides the helper functions for the all the heavy lifting tasks. It eases the task of creating the hamiltonian by a lot.
 
+### Project Structure
+```bash
+├── FUTURE_WORK.pdf
+├── LICENSE
+├── MANIFEST.in
+├── README.md
+├── pyproject.toml
+├── qiskit_glassydynamics
+│   ├── VERSION.txt
+│   ├── __init__.py
+│   └── helpers
+│       ├── __init__.py
+│       ├── decoretors.py
+│       └── ising.py
+├── requirements.txt
+├── research
+│   ├── cpm-vqe
+│   ├── glassy\ grid
+│   ├── notebooks
+│   ├── pickle-files
+│   └── rough-work-misc
+├── samples
+│   ├── 1Dising.py
+│   ├── 2Dising.py
+│   └── test.py
+├── setup.py
+└── tree.sh
+```
+
 ##### Install :
 
 ```shell
