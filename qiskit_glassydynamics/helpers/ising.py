@@ -1,4 +1,5 @@
 from .decoretors import str_to_hamiltonian
+import numpy as np
 from qiskit.opflow.primitive_ops.pauli_sum_op import PauliSumOp
 
 def get_interaction(element_1, element_2, matrix_dimension):
@@ -41,8 +42,14 @@ def get_interaction(element_1, element_2, matrix_dimension):
     output = "^".join([ "^".join([ R for R in C ]) for C in output ])
     return f"({output})"
 
+def array2hamiltonian(arr, op = 'Z'):
+    result = []
+    for i in arr:
+        result += [op if i == 1 else 'I']
+    return f"({'^'.join(result)})"
+
 @str_to_hamiltonian
-def hamiltonian_interaction(matrix_dimension = None) -> PauliSumOp:
+def Ising2D(matrix_dimension = None) -> PauliSumOp:
     """Gets total interaction over the ising matrix and returns the hamiltonian
 
     Args:
@@ -74,11 +81,28 @@ def hamiltonian_interaction(matrix_dimension = None) -> PauliSumOp:
     return output
 
 @str_to_hamiltonian
+def Ising1D(matrix_length = None) -> PauliSumOp:
+    if not matrix_length:
+        matrix_length = 7
+    arr = [0 for i in range(matrix_length)]
+    arr[0], arr[1] = 1, 1
+    arr = np.asarray(arr)
+    opmap = []
+    for i in range(matrix_length):
+        opmap += [ array2hamiltonian(arr) ]
+        arr = np.roll(arr, 1)
+    opmap = "+".join(opmap)
+    return opmap
+
+@str_to_hamiltonian
 def plain_hamiltonian(matrix_dimension = None, constructor = 'Z')->PauliSumOp:
     if not matrix_dimension:
         matrix_dimension = (3 , 3)
-    (tR, tC) = matrix_dimension
-    (tR, tC) = (tR*tC, tR*tC)
+    if type(matrix_dimension) == type(()):
+        (tR, tC) = matrix_dimension
+        (tR, tC) = (tR*tC, tR*tC)
+    if type(matrix_dimension) == int:
+        (tR, tC) = (matrix_dimension, matrix_dimension)
     output = []
     for R in range(tR):
         r = []

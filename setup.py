@@ -4,7 +4,7 @@ import inspect
 import sys
 import os
 
-long_description = """Qiskit Nature is a open-source library of quantum computing chemistry/physics experiments.
+long_description = """Qiskit Glassy Dynamics is a open-source library of quantum computing glassydynamics/chemistry/physics experiments.
  """
 
 with open('requirements.txt') as f:
@@ -15,19 +15,19 @@ if not hasattr(setuptools, 'find_namespace_packages') or not inspect.ismethod(se
           "Upgrade it to version >='40.1.0' and repeat install.".format(setuptools.__version__))
     sys.exit(1)
 
-VERSION_PATH = os.path.join(os.path.dirname(__file__), "qiskit_nature", "VERSION.txt")
+VERSION_PATH = os.path.join(os.path.dirname(__file__), "qiskit_glassydynamics", "VERSION.txt")
 with open(VERSION_PATH, "r") as version_file:
     VERSION = version_file.read().strip()
 
 setuptools.setup(
-    name='qiskit-nature',
+    name='QuGlassyIsing',
     version=VERSION,
-    description='Qiskit Nature: A library of quantum computing chemistry/physics experiments',
+    description='Qiskit Glassy Dynamics: A library of quantum computing glassydynamics/chemistry/physics experiments',
     long_description=long_description,
     long_description_content_type="text/markdown",
     url='https://github.com/arnavdas88/QuGlassyIsing',
-    author='Qiskit Nature Development Team',
-    author_email='hello@qiskit.org',
+    author='Qiskit Glassy Dynamics Development Team',
+    author_email='arnav.das88@gmail.com; turbasu.chatterjee@gmail.com; sishmam51@gmail.com;',
     license='Apache-2.0',
     classifiers=(
         "Environment :: Console",
@@ -44,7 +44,7 @@ setuptools.setup(
         "Programming Language :: Python :: 3.9",
         "Topic :: Scientific/Engineering"
     ),
-    keywords='qiskit sdk quantum nature chemistry physics',
+    keywords='qiskit quantum glassydynamics chemistry physics',
     packages=setuptools.find_packages(include=['qiskit_glassydynamics', 'qiskit_glassydynamics.*']),
     install_requires=REQUIREMENTS,
     include_package_data=True,
