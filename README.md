@@ -71,11 +71,11 @@ Python function to generate the quadratic equation with the correct interactions
 Varying the interfacial tension term, difference in energy gradient during minimization is seen. Higher tensions prevents the system from reaching the ground state peacefully. (need more stuff)
 
 
-##### Future Work
+##### Current Work
 - Implementation of 2D-Kinetic Ising model and Cellular-Potts Model to simulate glassy dynamics 
 - Open source library to simulate glassy dynamics that can ‘plug and play’ with the existing Qiskit framework
 
-##### Long Term Goals
+##### Future Work
 - Bigger Lattice size for Transverse ising in longitudinal field and Cellular Potts Model. For ising, 50 by 50. For CPM, 80 by 80. Matrix product state simulator to the rescue.
 
 - Investigating the effects of varying the interaction term in the Ising Model. J=0.25, J=4 etc
