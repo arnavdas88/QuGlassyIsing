@@ -2,7 +2,7 @@
 Repository for `Glassy dynamics using Quantum Computers` Team in Qiskit Hackathon Europe
 
 
-<img width="550" alt="image" src="https://user-images.githubusercontent.com/38852529/118729352-5ef76500-b853-11eb-9c6b-8471ecc55dc0.png">
+<img width="550" alt="image" src="https://user-images.githubusercontent.com/38852529/120808929-2c45b000-c567-11eb-8343-d8f36f9014cc.png">
 
 ## Glassy Dynamics using Quantum Computing
 
