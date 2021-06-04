@@ -86,7 +86,7 @@ Python function to generate the quadratic equation with the correct interactions
 Varying the interfacial tension term, difference in energy gradient during minimization is seen. Higher tensions prevents the system from reaching the ground state peacefully. (need more stuff)
 
 
-##### Current Work
+##### Completed Work
 - Implementation of Transverse Field Ising Model in a Longitudinal Field and Cellular-Potts Model to simulate glassy dynamics 
 - Open source library to simulate glassy dynamics that can ‘plug and play’ with the existing Qiskit framework
 
