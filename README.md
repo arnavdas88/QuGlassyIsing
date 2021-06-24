@@ -1,5 +1,5 @@
 # QuGlassyIsing
-Repository for `Glassy dynamics using Quantum Computers` Team in Qiskit Hackathon Europe
+Repository for `Glassy dynamics using Quantum Computers` Team in IBM Qiskit Europe Hackathon 2021
 
 
 <img width="550" alt="image" src="https://user-images.githubusercontent.com/38852529/120808929-2c45b000-c567-11eb-8343-d8f36f9014cc.png">
