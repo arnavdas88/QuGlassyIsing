@@ -10,6 +10,7 @@ Repository for `Glassy dynamics using Quantum Computers` Team in IBM Qiskit Euro
 ![GitHub repo size](https://img.shields.io/github/repo-size/arnavdas88/QuGlassyIsing)
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![arXiv](https://img.shields.io/badge/arXiv-2106.11298-b31b1b.svg)](https://arxiv.org/abs/2106.11298)
 
 
 Disordered Phase in Ising and Metastability in Cellular Potts Models Simulated on a Quantum Computer Hint at Glassy Dynamics
@@ -196,3 +197,16 @@ For complete sample, look at [2D Ising.py](https://github.com/arnavdas88/QuGlass
 | Ishmam Shah | Turbasu Chatterjee | Arnav Das | Sumit Suresh Kale | Rishabh Gupta | 
 | :---: | :---: | :---: | :---: | :---: |
 | Senior Year Chemistry Undergraduate, Dhaka University | Senior Year CS Undergraduate, MAKAUT | Senior Year CS Undergraduate, KNU | PhD Student, Purdue University, Sabre-Kais Group | PhD Student, Purdue University, Sabre-Kais Group |
+
+## Cite US
+
+```
+@misc{mohtashim2021disordered,
+      title={Disordered Phase in Ising and Metastability in Cellular Potts Models Hint at Glassy Dynamics}, 
+      author={Shah Ishmam Mohtashim and Turbasu Chatterjee and Arnav Das and Rishabh Gupta and Sumit Suresh Kale},
+      year={2021},
+      eprint={2106.11298},
+      archivePrefix={arXiv},
+      primaryClass={quant-ph}
+}
+```
