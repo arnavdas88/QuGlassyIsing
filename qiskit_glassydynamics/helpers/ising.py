@@ -1,134 +1,66 @@
-from .decoretors import str_to_hamiltonian
-import numpy as np
 from qiskit.opflow.primitive_ops.pauli_sum_op import PauliSumOp
+from .decoretors import str_to_hamiltonian
+import networkx as nx # networkx package, see https://networkx.github.io/documentation/stable/
+import numpy as np
 
+class IsingModel():
+    def __init__(self, graph):
+        """Creates an Ising Object from a `NetworkX` Graph of Lattice
 
-def get_interaction(element_1, element_2, matrix_dimension):
-    """Gets singular interaction between 2 elements of an ising matrix and returns the hamiltonion
+        Args:
+            graph (networkx.classes.graph.Graph): NetworkX Graph of the Lattice
+        """        
+        self.name = "IsingModel"
+        self.size = graph.number_of_nodes()
+        self.graph = graph
+        self.adjacency_matrix = nx.adjacency_matrix(self.graph).todense()
+        self.list_of_neigh = {}
+        for node in self.graph.nodes():
+            self.list_of_neigh[node] = list(self.graph.neighbors(node))
+        self.edges = list(self.graph.edges())
+    
+    def ising(self, basis='Z') -> PauliSumOp:
+        """Generates the Ising Model of the Lattice
 
-    Args:
-        element_1 ([int, int]): x, y coordinate of element 1 on the ising matrix
-        element_2 ([int, int]): x, y coordinate of element 2 on the ising matrix
-        matrix_dimension ([int, int]): Tuple representing the height, width of the ising matrix
+        Args:
+            basis (str, optional): Basis over the Ising Hamiltonian. Defaults to 'Z'.
 
-    Example:
-        element_1 : [1, 0]
-        element_2 : [2, 0]
-        matrix_dimension : 3, 3
+        Returns:
+            PauliSumOp: Pauli Sum for the Ising Hamiltonian
+        """        
+        total_interaction = []
+        for interaction in self.edges:
+            A, B = interaction
+            current_interction = self.interact(A, B, basis=basis)
+            if current_interction not in total_interaction:
+                total_interaction += [ current_interction ]
+        return sum(total_interaction)
+    
+    @str_to_hamiltonian()
+    def interact(self, node_A, node_B, basis = 'Z'):
+        hamiltonian_element = [ 'I' ] * self.size
+        hamiltonian_element[node_A] = basis
+        hamiltonian_element[node_B] = basis
+        return ''.join(hamiltonian_element)
 
-        output : ( I^I^I ^ Z^I^I ^ Z^I^I )
-        ___________________^_______^
-        [1, 0] + [2, 0]
+    def field(self, basis='X') -> PauliSumOp:
+        """Generates a Field Model to be superimposed over the Lattice
 
-    Returns:
-        str: Hamiltonian representing the singular interaction
-    """
-    output = []
-    (tR, tC) = matrix_dimension
-    (R1, C1) = element_1
-    (R2, C2) = element_2
-    if (-1 in element_1) or (-1 in element_2) or (tR in [R1, R2]) or (tC in [C1, C2]):
-        # Return empty, for outside bounds in edge cases
-        return ""
+        Args:
+            basis (str, optional): Basis over the Field Hamiltonian. Defaults to 'X'.
 
-    for _ in range(tR):
-        R = []
-        for _ in range(tC):
-            R += ["I"]
-        output += [R]
-    R, C = element_1
-    output[R][C] = "Z"
-    R, C = element_2
-    output[R][C] = "Z"
-    output = "^".join(["^".join([R for R in C]) for C in output])
-    return f"({output})"
+        Returns:
+            PauliSumOp: Pauli Sum for the Field Hamiltonian
+        """        
+        total_field = []
+        for diagonal in range(self.size):
+            field_element = self.plain(diagonal, basis)
+            if field_element not in total_field:
+                total_field += [ field_element ]
+        return sum(total_field)
 
-
-def array2hamiltonian(arr, op="Z"):
-    result = []
-    for i in arr:
-        result += [op if i == 1 else "I"]
-    return f"({'^'.join(result)})"
-
-
-@str_to_hamiltonian
-def Ising2DHamiltonian(matrix_dimension=None) -> PauliSumOp:
-    """Gets total interaction over the ising matrix and returns the hamiltonian
-
-    Args:
-        matrix_dimension ([int, int], optional): A tuple representing the height and width of the ising matrix . Defaults to (3, 3).
-
-    Returns:
-        PauliSumOp: PauliSumOp representation of the total hamiltonian.
-    """
-    if not matrix_dimension:
-        matrix_dimension = (3, 3)
-    (tR, tC) = matrix_dimension
-    output = ""
-    for R in range(tR):
-        for C in range(tC):
-            Oi = (R, C)
-            Li = (R - 1, C)
-            Ri = (R + 1, C)
-            Ti = (R, C - 1)
-            Bi = (R, C + 1)
-            I = []
-            I += [get_interaction(Li, Oi, matrix_dimension)]
-            I += [get_interaction(Ri, Oi, matrix_dimension)]
-            I += [get_interaction(Ti, Oi, matrix_dimension)]
-            I += [get_interaction(Bi, Oi, matrix_dimension)]
-            I = "+".join(I)
-            # print(I)
-            output += I + "+"
-    output = output.replace("++", "+").replace("++", "+").strip("+")
-    return output
-
-
-@str_to_hamiltonian
-def Ising1DHamiltonian(matrix_length=None) -> PauliSumOp:
-    """Gets total interaction over the ising matrix and returns the hamiltonian
-
-    Args:
-        matrix_dimension (int, optional): An integer representing the length of the ising matrix . Defaults to 7.
-
-    Returns:
-        PauliSumOp: PauliSumOp representation of the total hamiltonian.
-    """
-    if not matrix_length:
-        matrix_length = 7
-    arr = [0 for i in range(matrix_length)]
-    arr[0], arr[1] = 1, 1
-    arr = np.asarray(arr)
-    opmap = []
-    for i in range(matrix_length):
-        opmap += [array2hamiltonian(arr)]
-        arr = np.roll(arr, 1)
-    opmap = "+".join(opmap)
-    return opmap
-
-
-@str_to_hamiltonian
-def FieldHamiltonian(matrix_dimension=None, constructor="Z") -> PauliSumOp:
-    """Generates a field hamiltonian for the overall ising.
-
-    Args:
-        matrix_dimension (int or tuple, optional): General dimension of the overall matrix hamiltonian. Defaults to (3, 3).
-        constructor (str, optional): The interaction operation for the field hamiltonian. Defaults to 'Z'.
-
-    Returns:
-        PauliSumOp: PauliSumOp representation of the field hamiltonian
-    """
-    if not matrix_dimension:
-        matrix_dimension = (3, 3)
-    if type(matrix_dimension) == type(()):
-        (tR, tC) = matrix_dimension
-        (tR, tC) = (tR * tC, tR * tC)
-    if type(matrix_dimension) == int:
-        (tR, tC) = (matrix_dimension, matrix_dimension)
-    output = []
-    for R in range(tR):
-        r = []
-        for C in range(tC):
-            r += [constructor if R == C else "I"]
-        output += [f"({'^'.join(r)})"]
-    return "+".join(output)
+    @str_to_hamiltonian()
+    def plain(self, node, basis = 'Z'):
+        hamiltonian_element = [ 'I' ] * self.size
+        hamiltonian_element[node] = basis
+        return ''.join(hamiltonian_element)
